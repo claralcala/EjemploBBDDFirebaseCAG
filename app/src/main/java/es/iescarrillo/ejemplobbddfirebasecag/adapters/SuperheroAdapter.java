@@ -2,6 +2,7 @@ package es.iescarrillo.ejemplobbddfirebasecag.adapters;
 
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,8 +11,7 @@ import android.widget.Switch;
 import android.widget.TextView;
 
 import java.util.List;
-import java.util.SortedSet;
-import java.util.stream.Collectors;
+
 
 import es.iescarrillo.ejemplobbddfirebasecag.R;
 import es.iescarrillo.ejemplobbddfirebasecag.models.Superhero;
@@ -36,22 +36,21 @@ public class SuperheroAdapter extends ArrayAdapter<Superhero> {
 
         }
 
-        TextView tvID = convertView.findViewById(R.id.tviD);
+
         TextView tvNameL = convertView.findViewById(R.id.tvName);
-        TextView tvPowers = convertView.findViewById(R.id.tvPowers);
-        Switch sw = convertView.findViewById(R.id.switchActive);
+
 
 
         //En nuestro caso en la pantalla de inicio mostraremos el nombre y el apellido
-        tvID.setText("id: " + superhero.getId());
-        tvNameL.setText("Name: " +superhero.getName());
-        tvPowers.setText("Powers: " +superhero.getPowers());
 
-        if(superhero.isActive()){
-            sw.setChecked(true);
-        }else {
-            sw.setChecked(false);
-        }
+        tvNameL.setText(superhero.getName());
+        Log.i("Name", superhero.getName());
+
+       // if(superhero.isActive()){
+         //   sw.setChecked(true);
+        //}else {
+          //  sw.setChecked(false);
+        //}
 
         return convertView;
 

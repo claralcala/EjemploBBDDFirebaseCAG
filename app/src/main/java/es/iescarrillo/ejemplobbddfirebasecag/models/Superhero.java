@@ -8,7 +8,7 @@ public class Superhero {
 
     private String name;
 
-    private List powers;
+    private List<String> powers;
 
     private boolean active;
 
@@ -16,6 +16,7 @@ public class Superhero {
     public Superhero(){
 
     }
+
 
     public long getId() {
         return id;
@@ -33,11 +34,11 @@ public class Superhero {
         this.name = name;
     }
 
-    public List getPowers() {
+    public List<String> getPowers() {
         return powers;
     }
 
-    public void setPowers(List powers) {
+    public void setPowers(List<String> powers) {
         this.powers = powers;
     }
 

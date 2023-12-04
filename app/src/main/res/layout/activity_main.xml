@@ -21,11 +21,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="RESULTADOS" />
 
         <ListView
             android:id="@+id/lvSuperheroes"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:clickable="true"/>
+            android:layout_height="658dp"
+            android:layout_marginTop="60dp"
+            android:clickable="true" />
+
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
